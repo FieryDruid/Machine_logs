@@ -17,10 +17,8 @@ file_path = askopenfilename()
 filename = re.search(r'\/([\w\-]+)(\.\w+)', file_path).group(1)
 
 
-if anomalies_file == 1:
-    anomalies_id = "out_all.csv_templates_labeled.csv" #Файл с пометками о всех аномальных записях
-else:
-    anomalies_id = "out_all.csv_templates_labeled_2.csv"
+anomalies_id = "" #Файл с пометками о всех аномальных записях
+
 
 table=[]
 

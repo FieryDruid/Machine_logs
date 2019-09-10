@@ -41,13 +41,13 @@ with open(file_path, 'r', newline="") as file:
 
 # Данные для обучения с обозначенными аномалиями
 print("Загружаю данные для обучения")
-Y = np.loadtxt("all_logs_eventid_anomalies.csv", dtype="int", delimiter=',', usecols=default_cols)
-X = np.loadtxt(file_path, dtype="double", delimiter=',')
+Y = np.loadtxt("all_logs_eventid_anomalies.csv", dtype="int", delimiter=',', usecols=default_cols) #Выбираем столбец с аномалиями
+X = np.loadtxt(file_path, dtype="double", delimiter=',') #закодированный файл
 
 # #Данные для поиска аномалий
 print("Загружаю данные для обнаружения")
-new_x = np.loadtxt("data_eventid_coder_res.csv", dtype="double", delimiter=',')
-new_y = np.loadtxt("data_eventid_anomalies.csv", dtype="int", delimiter=',', usecols=default_cols)
+new_x = np.loadtxt("data_eventid_coder_res.csv", dtype="double", delimiter=',') #Закодированный файл
+new_y = np.loadtxt("data_eventid_anomalies.csv", dtype="int", delimiter=',', usecols=default_cols) #Столбец с аномалиями
 
 print(f"Данные в X:\n {X}")
 print(f"Данные в Y:\n {Y}")

@@ -125,8 +125,12 @@ if __name__ == '__main__':
 
 
 	done = False
-	shift = enter_shift()
-	window_size = 45 #Можно вводить выводом enter_shift()
+	if type == 1:
+		shift = enter_shift()
+		window_size = shift #Можно вводить выводом enter_shift()
+	else:
+		shift = enter_shift()
+		window_size = 45 #Можно вводить выводом enter_shift()
 
 	dirs = enter_csv()
 	for directory in dirs:
